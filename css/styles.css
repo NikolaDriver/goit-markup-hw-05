@@ -225,7 +225,7 @@ a {
 }
 .backdrop.is-hidden .modal {
     transform: skew(120deg) translate(1200px); 
-    transition: transform 650ms;
+    transition: transform 650ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal {
     position: absolute;
@@ -238,7 +238,7 @@ a {
     left: 50%;
     transform: skew(0deg);
     transform: translate(-50%,-50%);
-    transition: transform 850ms;
+    transition: transform 850ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close {
     position: absolute;
@@ -318,17 +318,17 @@ a {
 .specification-text {
     position: absolute;
     display: flex;
+    height: 70px;
     justify-content: center;
     align-items: center;
     width: 100%;
     bottom: 0;
-    padding-top: 27px;
-    padding-bottom: 27px;
 
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
+    text-transform: uppercase;
     color: #FFFFFF;
     background-color:rgba(47, 48, 58, 0.8);
 }
@@ -395,7 +395,7 @@ a {
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    fill: var(--main-text-color);
+    fill: #AFB1B8;;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
@@ -661,6 +661,9 @@ a {
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .portfolio-list-item:hover .portfolio-overlay-text {
+    transform: translateY(0);
+}
+.portfolio-list-item:focus .portfolio-overlay-text {
     transform: translateY(0);
 }
 .portfolio-overlay-text {
